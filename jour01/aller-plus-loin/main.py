@@ -1,4 +1,4 @@
-chaine= input ("entrez des caratactère:")
+chaine= input ("entrez une chaine de caractere:")
 
 if 'e' in chaine:
     print ("La chaîne contient le caractère 'e'.")

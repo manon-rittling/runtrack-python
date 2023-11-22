@@ -7,7 +7,7 @@ note3 = float(input("Saisir la troisieme note :"))
 
 moyenne_etudiant = moyenne(note1,note2,note3)
 
-print("La moyenne de l'etudiant est de:", moyenne_etudiant)
+print(f"La moyenne de l'etudiant est de:,{moyenne_etudiant:.2f}")
 
 if 15 <= moyenne_etudiant <= 20:
     print ("Très bon élève")

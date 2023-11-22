@@ -1,9 +1,12 @@
 def timeToText(minutes):
-    if minutes == int(minutes):
-        return (f"{minutes//60:.0f} heures {minutes%60} minutes ")
-    
-print(timeToText(45)) 
-print(timeToText(123))
+    if minutes != int(minutes) or minutes < 0:
+        print("le nombre saisi n'est pas positif")
+    else:
+        print(f"{minutes//60:.0f} heures {minutes%60} minutes ")
+        
+timeToText(-45)
+timeToText(125)
+
        
 
 # minutes//60: Cela représente la division entière de minutes par 60, ce qui donne le nombre d'heures. L'opérateur // effectue une division entière, en arrondissant le résultat vers le bas pour obtenir un nombre entier.

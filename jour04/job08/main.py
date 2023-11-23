@@ -5,7 +5,7 @@ somme=0
 
 for nombre in range (liste):
     if L[nombre] %2 ==0:
-        somme= somme + L[i]
+        somme= somme + L[nombre]
 
 print (somme)
 

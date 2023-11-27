@@ -5,23 +5,18 @@ def chiffrement_cesar(message, decalage):
 
     # Parcours de chaque caractère dans le message
     for caractere in message:
-        # Vérification si le caractère est une lettre alphabétique
-        if caractere.isalpha():
-            # Détermination de l'alphabet approprié (minuscules ou majuscules)
-            alphabet = 'abcdefghijklmnopqrstuvwxyz' if caractere.islower() else 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        
+        if caractere.isalpha(): # Vérification si le caractère est une lettre alphabétique
             
-            # Chiffrage du caractère en tenant compte du décalage et du dépassement de l'alphabet
-            nouvel_index = (alphabet.find(caractere) + decalage) % 26
+            alphabet = 'abcdefghijklmnopqrstuvwxyz' if caractere.islower() else 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' # Détermination de l'alphabet approprié (minuscules ou majuscules)
+            
+            nouvel_index = (alphabet.find(caractere) + decalage) % 26 # Chiffrage du caractère en tenant compte du décalage et du dépassement de l'alphabet
             caractere_chiffre = alphabet[nouvel_index]
-            
-            # Ajout du caractère chiffré au résultat
-            resultat += caractere_chiffre
+            resultat += caractere_chiffre # Ajout du caractère chiffré au résultat
         else:
-            # Si le caractère n'est pas une lettre, l'ajouter tel quel au résultat
-            resultat += caractere
+            resultat += caractere # Si le caractère n'est pas une lettre, l'ajouter tel quel au résultat
 
-    # Retour du résultat chiffré
-    return resultat
+    return resultat # Retour du résultat chiffré
 
 # Exemple d'utilisation avec un message et un décalage de 3
 message = "Jules César, général et stratège romain"
@@ -58,5 +53,24 @@ print("Message chiffré:", message_chiffre)
 # Le résultat est affiché.
 # En résumé, la fonction prend un message et un décalage, déplace chaque lettre du message en fonction du décalage, gère le dépassement de l'alphabet, et retourne le message chiffré.
 
+# deuxieme possibilité :
+
+
+# import string
+# string.ascii_lowercase
+
+
+# def chiffrage(mot, decalage):
+#     mot_code = ""
+#     for i in mot:
+#         i = ord(i)
+#         if 96 < i:
+#             i += decalage
+#             if i > 122:
+#                 i -= 26
+#         mot_code += chr(i)
+#     print (mot_code)
+
+# chiffrage("Jules César, général et stratège romain", 3)
 
 
